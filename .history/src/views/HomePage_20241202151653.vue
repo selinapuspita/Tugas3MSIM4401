@@ -25,50 +25,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      cryptocrruencies: [],
-    };
-  },
-  methods: {
-    async fetchData() {
-      try{
-      const response = await axios.get('https://api.coinlore.net/api/tickers/');
-      this.cryptocrruencies = response.data.data;
-    }catch (error) {
-      console.error('Error fetching data', error);
-    }
-  },
-},
-mounted() {
-  this.fetchData();
-},
-};
 </script>
 
 <style scoped>
-  .header-row {
-    background-color: #ecc587;
-    font-weight:bold;
-    text-align:center;
-  }
-  .data-row:nth-child(odd) {
-    background-color: #fdd79a;
-  }
-  .data-row:nth-child(even) {
-    background-color: #f9d8a7;
-  }
-  .data-row {
-    text-align:center;
-  }
-  ion-col {
-    border: 1px solid #919191;
-    padding: 8px;
-  }
-  ion-button {
-    margin: 10px;
-  }
+  
 </style>

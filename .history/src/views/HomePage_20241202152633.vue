@@ -70,5 +70,6 @@ mounted() {
   }
   ion-button {
     margin: 10px;
+    border-radius: 10px;
   }
 </style>

@@ -24,51 +24,36 @@
   </ion-page>
 </template>
 
-<script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      cryptocrruencies: [],
-    };
-  },
-  methods: {
-    async fetchData() {
-      try{
-      const response = await axios.get('https://api.coinlore.net/api/tickers/');
-      this.cryptocrruencies = response.data.data;
-    }catch (error) {
-      console.error('Error fetching data', error);
-    }
-  },
-},
-mounted() {
-  this.fetchData();
-},
-};
+<script setup lang="ts">
+  import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 </script>
 
 <style scoped>
-  .header-row {
-    background-color: #ecc587;
-    font-weight:bold;
-    text-align:center;
+  #container {
+    text-align: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  .data-row:nth-child(odd) {
-    background-color: #fdd79a;
+
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
   }
-  .data-row:nth-child(even) {
-    background-color: #f9d8a7;
+
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #8c8c8c;
+
+    margin: 0;
   }
-  .data-row {
-    text-align:center;
-  }
-  ion-col {
-    border: 1px solid #919191;
-    padding: 8px;
-  }
-  ion-button {
-    margin: 10px;
+
+  #container a {
+    text-decoration: none;
   }
 </style>

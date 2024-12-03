@@ -65,10 +65,7 @@ mounted() {
     text-align:center;
   }
   ion-col {
-    border: 1px solid #919191;
+    border: 1px solid #6d6d6d;
     padding: 8px;
-  }
-  ion-button {
-    margin: 10px;
   }
 </style>

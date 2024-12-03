@@ -59,16 +59,6 @@ mounted() {
     background-color: #fdd79a;
   }
   .data-row:nth-child(even) {
-    background-color: #f9d8a7;
-  }
-  .data-row {
-    text-align:center;
-  }
-  ion-col {
-    border: 1px solid #919191;
-    padding: 8px;
-  }
-  ion-button {
-    margin: 10px;
+    background-color: #f9d49c;
   }
 </style>
